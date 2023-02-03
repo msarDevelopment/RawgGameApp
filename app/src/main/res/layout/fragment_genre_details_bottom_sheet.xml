@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.genredetailsbottomsheet.GenreDetailsBottomSheetFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivBtmSheetHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_rectangle"
+        android:layout_gravity="center"
+        android:layout_marginVertical="8dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:id="@+id/tvGenreDetailsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="action"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp"
+                android:textSize="32sp"
+                android:fontFamily="@font/dirtyline_36daysoftype_2022"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/tvGenreDetailsNumberOfGamesLabel"
+                style="@style/InfoLabel"
+                android:text="@string/genre_details_number_of_games_label"
+                android:fontFamily="@font/sf_compact_semibold_text"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenreDetailsTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/tvGenreDetailsNumberOfGames"
+                style="@style/InfoLabel"
+                tools:text="100000"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenreDetailsTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="?attr/colorDialogBackground"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_rounded_number_of_games"
+                android:paddingHorizontal="4dp"
+                android:layout_marginEnd="16dp"/>
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/tvGenreDetailsDescription"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenreDetailsNumberOfGamesLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constrainedWidth="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Description"
+                android:textSize="16sp"
+                app:trimExpandedText="Show less"
+                app:trimCollapsedText="Read more"
+                app:trimMode="trimModeLength"
+                app:trimLength="175"
+                app:colorClickableText="?attr/colorReadMore"/>
+
+            <TextView
+                android:id="@+id/tvGenreDetailsExampleGamesLabel"
+                style="@style/InfoLabel"
+                android:text="@string/genre_details_example_games_label"
+                android:fontFamily="@font/sf_compact_semibold_text"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenreDetailsDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvExampleGames"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="80dp"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenreDetailsExampleGamesLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_genre_example_game"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:itemCount="6"
+                tools:spanCount="3"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

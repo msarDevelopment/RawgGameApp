@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/discoverGamesFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.msardevelopment.rawggameapp.ui.genreselection.onboarding.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_discoverGamesFragment"
+            app:destination="@id/discoverGamesFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardingFragment_to_genreDetailsBottomSheetFragment"
+            app:destination="@id/genreDetailsBottomSheetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/genreSelectionFragment"
+        android:name="com.msardevelopment.rawggameapp.ui.genreselection.GenreSelectionFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_genre_selection" >
+        <action
+            android:id="@+id/action_genreSelectionFragment_to_genreDetailsBottomSheetFragment"
+            app:destination="@id/genreDetailsBottomSheetFragment" />
+        <action
+            android:id="@+id/action_genreSelectionFragment_back_to_discoverGamesFragment"
+            app:destination="@id/discoverGamesFragment"
+            app:popUpTo="@id/genreSelectionFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/genreDetailsBottomSheetFragment"
+        android:name="com.msardevelopment.rawggameapp.ui.genredetailsbottomsheet.GenreDetailsBottomSheetFragment"
+        android:label="fragment_genre_details_bottom_sheet"
+        tools:layout="@layout/fragment_genre_details_bottom_sheet" >
+        <argument
+            android:name="externalId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="games"
+            app:argType="string"
+            android:defaultValue="0" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/discoverGamesFragment"
+        android:name="com.msardevelopment.rawggameapp.ui.discovergames.DiscoverGamesFragment"
+        android:label="@string/title_discover_games"
+        tools:layout="@layout/fragment_discover_games" >
+        <action
+            android:id="@+id/action_discoverGamesFragment_to_gameDetailsFragment"
+            app:destination="@id/gameDetailsFragment" />
+        <action
+            android:id="@+id/action_discoverGamesFragment_to_genreSelectionFragment"
+            app:destination="@id/genreSelectionFragment" />
+    </fragment>
+
+
+
+    <dialog
+        android:id="@+id/gameDetailsFragment"
+        android:name="com.msardevelopment.rawggameapp.ui.gamedetails.GameDetailsFragment"
+        android:label="fragment_game_details"
+        tools:layout="@layout/fragment_game_details">
+        <argument
+            android:name="gameExternalId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </dialog>
+
+
+</navigation>

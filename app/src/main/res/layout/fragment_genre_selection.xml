@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.genreselection.GenreSelectionFragment"
+    android:background="@drawable/selection_background"
+    android:paddingTop="32dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/headerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="20dp"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/ivGenreSelectionBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back_arrow_big"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvGenreSelectionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/genre_selection_label"
+                    app:layout_constrainedWidth="true"
+                    android:fontFamily="@font/dirtyline_36daysoftype_2022"
+                    android:textSize="50sp"
+                    app:layout_constraintTop_toBottomOf="@id/ivGenreSelectionBack"
+                    app:layout_constraintStart_toStartOf="@+id/ivGenreSelectionBack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvGenreSelectionMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/genre_selection_message"
+                    android:fontFamily="@font/rubik_mono_one_regular"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGenreSelectionLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constrainedWidth="true"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/genreSelectionFragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="4dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGenres"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_genre"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

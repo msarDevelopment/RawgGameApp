@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.discovergames.DiscoverGamesFragment"
+    android:background="@drawable/selection_background"
+    android:paddingTop="32dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/discover_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/discover_collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/discoverHeaderContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <TextView
+                    android:id="@+id/tvDiscoverGamesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discover_games_label"
+                    android:textSize="48sp"
+                    app:layout_constrainedWidth="true"
+                    android:fontFamily="@font/dirtyline_36daysoftype_2022"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivFirebaseMessage"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:includeFontPadding="true"/>
+
+                <ImageView
+                    android:id="@+id/ivFirebaseMessage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_firebase"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:padding="4dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/discoverGamesFragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="4dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGames"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_game"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            android:layout_marginTop="8dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

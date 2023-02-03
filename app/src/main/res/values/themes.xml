@@ -1,0 +1,104 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- Transparent status bar. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/sf_compact_regular_text</item>
+
+        <item name="colorHyperlink">@color/blue_0</item>
+
+        <item name="colorDialogBackground">@color/purple_0</item>
+
+        <item name="colorReadMore">@color/pink_0</item>
+
+        <item name="colorGameGenre">@color/yellow_0</item>
+
+        <item name="colorGameRatingHigh">@color/green_0</item>
+        <item name="colorGameRatingMid">@color/yellow_1</item>
+        <item name="colorGameRatingLow">@color/red_0</item>
+        <item name="colorGameRatingNone">@color/gray_1</item>
+
+        <item name="colorGenreItemBackground">@color/purple_4</item>
+        <item name="colorGameItemBackground">@color/purple_4</item>
+        <item name="colorGameItemBorder">@color/pink_1</item>
+
+        <item name="colorMenuBackground">@color/gray_0</item>
+        <item name="colorContinueButton">@color/purple_1</item>
+        <item name="colorBackButtonBackground">@color/purple_3</item>
+        <item name="colorGameGenreChip">@color/yellow_0</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MyApplication">
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+    </style>
+
+    <style name="MyDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_right</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+    </style>
+
+    <style name="GameGenreChip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Action</item>
+        <item name="android:textColor">?attr/colorGameGenreChip</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:background">@drawable/bg_rounded_genre</item>
+    </style>
+    <style name="GameGenreChipItem" parent="GameGenreChip">
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/bg_rounded_genre_thin</item>
+    </style>
+
+    <style name="InfoLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/sf_compact_bold_text</item>
+    </style>
+
+    <style name="Hyperlink">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorHyperlink</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:text">www.website.com</item>
+        <item name="android:maxLines">2</item>
+    </style>
+</resources>
