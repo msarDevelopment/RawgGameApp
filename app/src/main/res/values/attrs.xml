@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorHyperlink" format="reference" />
+    <attr name="colorDialogBackground" format="reference" />
+    <attr name="colorReadMore" format="reference" />
+    <attr name="colorGameGenre" format="reference" />
+    <attr name="colorGameRatingHigh" format="reference" />
+    <attr name="colorGameRatingMid" format="reference" />
+    <attr name="colorGameRatingLow" format="reference" />
+    <attr name="colorGameRatingNone" format="reference" />
+    <attr name="colorGenreItemBackground" format="reference" />
+    <attr name="colorGameItemBackground" format="reference" />
+    <attr name="colorGameItemBorder" format="reference" />
+    <attr name="colorMenuBackground" format="reference" />
+    <attr name="colorContinueButton" format="reference" />
+    <attr name="colorBackButtonBackground" format="reference" />
+    <attr name="colorGameGenreChip" format="reference" />
+</resources>

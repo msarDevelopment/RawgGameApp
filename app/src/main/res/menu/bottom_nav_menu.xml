@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/discoverGamesFragment"
+        android:icon="@drawable/bottom_nav_menu_discover_games_selector"
+        android:title="@string/title_discover_games" />
+
+    <item
+        android:id="@+id/genreSelectionFragment"
+        android:icon="@drawable/bottom_nav_menu_settings_selector"
+        android:title="@string/title_settings" />
+</menu>

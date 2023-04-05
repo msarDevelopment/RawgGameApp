@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "170881313601",
+    "project_id": "rawggameapp",
+    "storage_bucket": "rawggameapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170881313601:android:77334a834381ae771a8fc0",
+        "android_client_info": {
+          "package_name": "com.msardevelopment.rawggameapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170881313601-t3vot4lqert9i2ovcea2ba64krs04qfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgpz845IKDCs6l27buEw8L6pDa7ndy4v4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170881313601-t3vot4lqert9i2ovcea2ba64krs04qfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
